@@ -9,8 +9,8 @@ export function PaperlessCta() {
       <Container>
         <SectionReveal>
           <div className="relative overflow-hidden rounded-[2rem] border border-[#0066ff]/20 bg-[#010b13] p-8 shadow-[0_0_60px_rgba(0,102,255,0.12)] md:p-12 lg:p-14">
-            <span className="watermark-cb7 absolute -right-4 top-1/2 -translate-y-1/2 md:right-8">
-              CB7
+            <span className="watermark-n7 absolute -right-4 top-1/2 -translate-y-1/2 md:right-8">
+              N7
             </span>
             <div className="relative flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
               <div className="max-w-xl">
@@ -18,7 +18,7 @@ export function PaperlessCta() {
                   Take the full advantage of going paper-less now.
                 </h2>
                 <p className="text-sm leading-relaxed text-text-muted md:text-base">
-                  CB7 helps your financial institution improve the client experience, automate and
+                  N7 helps your financial institution improve the client experience, automate and
                   optimize procedures, simplify banking operations
                 </p>
               </div>

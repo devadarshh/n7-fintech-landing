@@ -8,7 +8,7 @@ import { n7Assets } from "@/data/n7Assets";
 
 export function LoanManagement() {
   return (
-    <section className="relative overflow-hidden border-t border-white/[0.06] bg-black py-20 md:py-28">
+    <section className="relative overflow-hidden border-t border-white/[0.06] bg-bg-dark py-20 md:py-28">
       <Container className="relative">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-14 xl:gap-20">
           <SectionReveal>

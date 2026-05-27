@@ -67,7 +67,7 @@ export function LinkArrow({
     <Link
       href={href}
       className={cn(
-        "inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.08em] text-[#00b2ff] transition hover:gap-3",
+        "inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.08em] text-accent-cyan transition hover:gap-3",
         className,
       )}
       {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}

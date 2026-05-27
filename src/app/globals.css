@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --bg-dark: #000000;
-  --bg-dark-elevated: #0a0a0a;
+  --bg-dark: #010b13;
+  --bg-dark-elevated: #0a111e;
   --bg-light: #eef4fa;
   --text-primary: #ffffff;
   --text-muted: #94a3b8;
@@ -25,6 +25,7 @@
   --color-accent-cyan: var(--accent-cyan);
   --color-accent-blue: var(--accent-blue);
   --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair), Georgia, "Times New Roman", serif;
 }
 
 * {
@@ -62,6 +63,13 @@ body {
   background-clip: text;
 }
 
+.footer-logo {
+  background: linear-gradient(180deg, #3db8ff 0%, #0066ff 55%, #0047cc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .btn-primary {
   background: var(--accent-gradient);
   box-shadow: 0 8px 32px rgba(0, 102, 255, 0.4);
@@ -82,10 +90,10 @@ body {
 
 .hero-glow {
   background: radial-gradient(
-    circle at 55% 50%,
-    rgba(0, 102, 255, 0.55) 0%,
-    rgba(0, 82, 255, 0.2) 35%,
-    transparent 65%
+    circle at 72% 48%,
+    rgba(0, 102, 255, 0.5) 0%,
+    rgba(0, 82, 255, 0.18) 38%,
+    transparent 68%
   );
 }
 

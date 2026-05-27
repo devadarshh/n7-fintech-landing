@@ -10,7 +10,7 @@ export function Insights() {
   const compact = insights.filter((i) => !i.featured);
 
   return (
-    <section className="relative overflow-hidden py-20 md:py-28">
+    <section className="relative overflow-hidden bg-bg-dark py-20 md:py-28">
       <div className="solutions-glow pointer-events-none absolute inset-0 opacity-60" />
       <Container className="relative">
         <div className="lg:grid lg:grid-cols-[minmax(280px,400px)_1fr] lg:gap-16 xl:gap-24">

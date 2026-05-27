@@ -6,7 +6,7 @@ import { links } from "@/data/links";
 
 export function CoreBanking() {
   return (
-    <section className="relative overflow-hidden bg-black py-16 md:py-28">
+    <section className="relative overflow-hidden bg-bg-dark py-16 md:py-28">
       <div className="pointer-events-none absolute inset-0 flex items-center justify-end overflow-hidden pr-0 md:pr-8">
         <span className="watermark-n7 translate-x-[15%]">N7</span>
       </div>

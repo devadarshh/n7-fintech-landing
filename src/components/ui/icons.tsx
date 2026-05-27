@@ -44,13 +44,13 @@ export function SolutionIcon({ className }: { className?: string }) {
 export function PatternTile({ className }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 120 120" fill="none" aria-hidden>
-      <rect width="120" height="120" fill="#0f172a" />
+      <rect width="120" height="120" fill="#0c1a2e" />
       {[0, 1].map((row) =>
         [0, 1].map((col) => (
           <path
             key={`${row}-${col}`}
             d="M30 30L50 10L70 30L50 50L30 30Z"
-            stroke="#22d3ee"
+            stroke="#00d1ff"
             strokeWidth="2"
             transform={`translate(${col * 60} ${row * 60})`}
           />

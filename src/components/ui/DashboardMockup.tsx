@@ -91,12 +91,13 @@ function KycDashboard() {
         <h4 className="mb-3 text-sm font-bold text-slate-800">KYC Dashboard</h4>
         <div className="mb-3 grid grid-cols-3 gap-2">
           {[
-            { val: "115", color: "text-blue-600" },
-            { val: "940", color: "text-amber-500" },
-            { val: "105", color: "text-emerald-600" },
-          ].map(({ val, color }) => (
-            <div key={val} className="rounded border border-slate-200 bg-white p-2 text-center">
-              <p className={`text-lg font-bold ${color}`}>{val}</p>
+            { val: "2115", label: "Total Customers", color: "text-blue-600" },
+            { val: "940", label: "In-Progress", color: "text-amber-500" },
+            { val: "1050", label: "KYC Completed", color: "text-emerald-600" },
+          ].map(({ val, label, color }) => (
+            <div key={label} className="rounded border border-slate-200 bg-white p-2 text-center">
+              <p className={`text-sm font-bold md:text-lg ${color}`}>{val}</p>
+              <p className="mt-0.5 text-[6px] leading-tight text-slate-500 md:text-[7px]">{label}</p>
             </div>
           ))}
         </div>

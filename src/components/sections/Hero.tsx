@@ -10,7 +10,7 @@ import { trustedBrands } from "@/data/trustedBy";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-black pt-[88px] pb-12 md:pt-[96px] md:pb-16 lg:flex lg:min-h-screen lg:flex-col lg:pt-[104px] lg:pb-20">
+    <section className="relative overflow-hidden bg-bg-dark pt-[88px] pb-12 md:pt-[96px] md:pb-16 lg:flex lg:min-h-screen lg:flex-col lg:pt-[104px] lg:pb-20">
       <div className="hero-glow pointer-events-none absolute inset-0" aria-hidden />
 
       <Container className="relative lg:flex lg:flex-1 lg:flex-col">
@@ -21,7 +21,7 @@ export function Hero() {
               <br />
               of modern banking
             </h1>
-            <p className="mb-8 max-w-[480px] text-[15px] leading-[1.65] text-[#9ca3af] md:text-base md:leading-7">
+            <p className="mb-8 max-w-[480px] text-[15px] leading-[1.65] text-text-body md:text-base md:leading-7">
               We drive innovation and growth, provide seamless customer experience and operational
               excellence
             </p>
@@ -53,14 +53,14 @@ export function Hero() {
         </div>
 
         <div className="mt-14 border-t border-white/[0.08] pt-10 lg:mt-auto lg:pt-12">
-          <p className="mb-6 text-[11px] font-medium uppercase tracking-[0.16em] text-[#6b7280]">
+          <p className="mb-6 text-[11px] font-medium uppercase tracking-[0.16em] text-text-muted">
             Trusted by
           </p>
           <ul className="flex flex-wrap items-center gap-x-8 gap-y-5 sm:gap-x-10 md:gap-x-12">
             {trustedBrands.map((brand) => (
               <li
                 key={brand.id}
-                className="flex items-center gap-2 text-[13px] font-semibold tracking-wide text-[#9ca3af]"
+                className="flex items-center gap-2 text-[13px] font-semibold tracking-wide text-text-muted"
               >
                 <TrustedBrandIcon brand={brand.id} />
                 <span>{brand.name}</span>

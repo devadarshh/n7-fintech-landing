@@ -33,7 +33,7 @@ export function CaseStudies() {
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
   return (
-    <section className="py-16 md:py-24">
+    <section className="bg-bg-dark py-16 md:py-24">
       <Container>
         <SectionReveal>
           <h2 className="mb-12 text-center text-3xl font-bold text-white md:text-4xl">

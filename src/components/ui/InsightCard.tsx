@@ -12,7 +12,7 @@ export function InsightCard({
 }) {
   if (variant === "featured") {
     return (
-      <article className="flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#0a111e] sm:flex-row">
+      <article className="flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-bg-dark-elevated sm:flex-row">
         <div className="relative h-52 w-full shrink-0 sm:h-auto sm:w-[220px]">
           <PatternTile className="h-full w-full" />
         </div>
@@ -37,7 +37,7 @@ export function InsightCard({
   }
 
   return (
-    <article className="flex h-full flex-col rounded-2xl border border-white/10 bg-[#0a111e] p-6">
+    <article className="flex h-full flex-col rounded-2xl border border-white/10 bg-bg-dark-elevated p-6">
       <p className="mb-2 text-[11px] font-semibold uppercase tracking-wider text-[#00d1ff]">
         {insight.tag}
       </p>

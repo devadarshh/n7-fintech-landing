@@ -10,9 +10,9 @@ export function CoreBankingFeatures() {
   const rightCol = coreBankingFeatures.slice(midpoint);
 
   return (
-    <section className="py-16 md:py-24">
+    <section className="relative overflow-hidden border-t border-white/[0.06] bg-black py-16 md:py-24 lg:py-28">
       <Container>
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16 xl:gap-20">
           <SectionReveal className="order-2 lg:order-1">
             <DashboardMockup variant="kyc" />
           </SectionReveal>

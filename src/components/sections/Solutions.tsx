@@ -7,7 +7,7 @@ import { solutions } from "@/data/solutions";
 
 export function Solutions() {
   return (
-    <section id="solutions" className="relative bg-black py-20 md:py-28 lg:py-32">
+    <section id="solutions" className="relative bg-bg-dark py-20 md:py-28 lg:py-32">
       <div className="solutions-glow pointer-events-none absolute inset-0" aria-hidden />
       <Container className="relative">
         <div className="lg:grid lg:grid-cols-[minmax(280px,400px)_1fr] lg:items-start lg:gap-16 xl:gap-24">
