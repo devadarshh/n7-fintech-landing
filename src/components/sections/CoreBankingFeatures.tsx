@@ -12,17 +12,17 @@ export function CoreBankingFeatures() {
   return (
     <section className="py-16 md:py-24">
       <Container>
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           <SectionReveal className="order-2 lg:order-1">
-            <DashboardMockup variant="vc" />
+            <DashboardMockup variant="kyc" />
           </SectionReveal>
 
           <SectionReveal delay={0.1} className="order-1 lg:order-2">
-            <h2 className="mb-4 text-3xl font-bold leading-tight text-white md:text-4xl">
+            <h2 className="mb-3 max-w-xl text-[1.75rem] font-bold leading-[1.15] text-white md:text-4xl">
               Run a more efficient, flexible, and digitally connected corebanking system
             </h2>
-            <p className="mb-8 text-sm text-text-muted md:text-base">What you will get:</p>
-            <div className="grid gap-6 sm:grid-cols-2">
+            <p className="mb-8 text-sm font-medium text-white md:text-base">What you will get:</p>
+            <div className="grid gap-8 sm:grid-cols-2">
               <ul className="space-y-4">
                 {leftCol.map((item) => (
                   <CheckListItem key={item}>{item}</CheckListItem>

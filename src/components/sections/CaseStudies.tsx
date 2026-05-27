@@ -8,6 +8,7 @@ import { LinkArrow } from "@/components/ui/Button";
 import { PatternTile } from "@/components/ui/icons";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { caseStudies } from "@/data/caseStudies";
+import { links } from "@/data/links";
 import { cn } from "@/lib/utils";
 
 export function CaseStudies() {
@@ -63,7 +64,7 @@ export function CaseStudies() {
                         {study.brand}
                       </p>
                     </div>
-                    <Button variant="ghost" className="mt-6 w-full md:w-auto">
+                    <Button variant="ghost" href={links.caseStudy(study.id)} className="mt-6 w-full md:w-auto">
                       READ MORE
                     </Button>
                   </div>
@@ -106,7 +107,9 @@ export function CaseStudies() {
               →
             </button>
           </div>
-          <LinkArrow className="hidden sm:inline-flex">VIEW ALL</LinkArrow>
+          <LinkArrow href={links.caseStudies} className="hidden sm:inline-flex">
+            VIEW ALL
+          </LinkArrow>
         </div>
       </Container>
     </section>

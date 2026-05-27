@@ -1,3 +1,5 @@
+import { fakeLink, links } from "./links";
+
 export const addresses = [
   {
     city: "London",
@@ -13,24 +15,29 @@ export const addresses = [
   },
 ];
 
-export const solutionLinks = [
-  "Core Banking CB7",
-  "Digital Banking N7",
-  "Open Banking",
-  "Loan Origination System",
-  "Loan Management System",
-  "Digital Transformation",
+export type FooterLink = { label: string; href: string };
+
+export const solutionLinks: FooterLink[] = [
+  { label: "Core Banking CB7", href: fakeLink("solutions/core-banking-cb7") },
+  { label: "Digital Banking N7", href: fakeLink("solutions/digital-banking-n7") },
+  { label: "Open Banking", href: fakeLink("solutions/open-banking") },
+  { label: "Loan Origination System", href: fakeLink("solutions/loan-origination") },
+  { label: "Loan Management System", href: fakeLink("solutions/loan-management") },
+  { label: "Digital Transformation", href: fakeLink("solutions/digital-transformation") },
 ];
 
-export const bankingLinks = [
-  "About Us",
-  "Solutions",
-  "Contact",
-  "Company",
-  "Careers",
-  "Insights",
-  "Core Team",
-  "Brand Center",
+export const bankingLinks: FooterLink[] = [
+  { label: "About Us", href: links.about },
+  { label: "Solutions", href: links.solutions },
+  { label: "Contact", href: links.contact },
+  { label: "Company", href: fakeLink("company") },
+  { label: "Careers", href: fakeLink("careers") },
+  { label: "Insights", href: links.insights },
+  { label: "Core Team", href: fakeLink("core-team") },
+  { label: "Brand Center", href: fakeLink("brand-center") },
 ];
 
-export const socialLinks = ["LinkedIn", "X"];
+export const socialLinks: FooterLink[] = [
+  { label: "LinkedIn", href: links.linkedin },
+  { label: "X", href: links.twitter },
+];

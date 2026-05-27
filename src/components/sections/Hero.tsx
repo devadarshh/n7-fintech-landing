@@ -1,86 +1,73 @@
 "use client";
 
-import Image from "next/image";
-import { motion } from "framer-motion";
 import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/Button";
-import { BalanceCard, ActivityCard } from "@/components/ui/GlassCard";
-import { SectionReveal } from "@/components/ui/SectionReveal";
-import { trustedLogos } from "@/data/trustedBy";
+import { FigmaAsset } from "@/components/ui/FigmaAsset";
+import { TrustedBrandIcon } from "@/components/ui/TrustedBrandIcon";
+import { links } from "@/data/links";
+import { n7Assets } from "@/data/n7Assets";
+import { trustedBrands } from "@/data/trustedBy";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pt-28 pb-16 md:pt-36 md:pb-24">
-      <div className="pointer-events-none absolute -right-32 top-20 h-[500px] w-[500px] rounded-full bg-blue-600/10 blur-3xl" />
+    <section className="relative overflow-hidden bg-black pt-[88px] pb-12 md:pt-[96px] md:pb-16 lg:flex lg:min-h-screen lg:flex-col lg:pt-[104px] lg:pb-20">
+      <div className="hero-glow pointer-events-none absolute inset-0" aria-hidden />
 
-      <Container>
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          <div>
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="mb-6 text-4xl font-bold leading-[1.1] tracking-tight text-white md:text-5xl lg:text-6xl"
-            >
-              The new foundation of modern banking
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="mb-8 max-w-lg text-base leading-relaxed text-text-muted md:text-lg"
-            >
+      <Container className="relative lg:flex lg:flex-1 lg:flex-col">
+        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-12 xl:gap-16">
+          <div className="flex flex-col justify-center lg:max-w-[540px] lg:py-8">
+            <h1 className="mb-5 text-[2.25rem] font-bold leading-[1.08] tracking-[-0.03em] text-white sm:text-[2.75rem] lg:text-[4rem] lg:leading-[1.05] xl:text-[4.5rem]">
+              The new foundation
+              <br />
+              of modern banking
+            </h1>
+            <p className="mb-8 max-w-[480px] text-[15px] leading-[1.65] text-[#9ca3af] md:text-base md:leading-7">
               We drive innovation and growth, provide seamless customer experience and operational
-              excellence for financial institutions worldwide.
-            </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="flex flex-wrap gap-4"
-            >
-              <Button variant="primary">REQUEST DEMO</Button>
-              <Button variant="ghost">CONTACT US</Button>
-            </motion.div>
+              excellence
+            </p>
+            <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+              <Button variant="primary" href={links.requestDemo} className="rounded-lg px-7 py-3.5">
+                REQUEST DEMO
+              </Button>
+              <Button variant="ghost" href={links.contact} className="rounded-lg px-7 py-3.5">
+                CONTACT US
+              </Button>
+            </div>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.98 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.25 }}
-            className="relative mx-auto aspect-[4/5] w-full max-w-md lg:max-w-none"
-          >
-            <div className="relative h-full min-h-[400px] overflow-hidden rounded-3xl">
-              <Image
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80"
-                alt="Professional using banking app on laptop and phone"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
+          <div className="relative mx-auto w-full max-w-[610px] lg:max-w-none lg:justify-self-end">
+            <div
+              className="pointer-events-none absolute -right-4 top-1/2 z-0 h-[85%] w-[90%] -translate-y-1/2 rounded-full bg-[#0066ff]/25 blur-[72px]"
+              aria-hidden
+            />
+            <div className="relative z-[1] overflow-hidden rounded-[32px]">
+              <FigmaAsset
+                src={n7Assets.hero.visual}
+                width={n7Assets.hero.visualWidth}
+                height={n7Assets.hero.visualHeight}
+                alt="Digital banking experience with balance and activity cards"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-bg-dark/80 via-transparent to-transparent" />
             </div>
-            <ActivityCard className="absolute left-2 top-6 z-10 scale-90 sm:scale-100 md:left-4" />
-            <BalanceCard className="absolute bottom-6 right-2 z-10 scale-90 sm:scale-100 md:right-4" />
-          </motion.div>
+          </div>
         </div>
 
-        <SectionReveal className="mt-16 border-t border-white/10 pt-10 md:mt-20">
-          <p className="mb-6 text-xs font-semibold uppercase tracking-widest text-text-muted">
-            Trusted By:
+        <div className="mt-14 border-t border-white/[0.08] pt-10 lg:mt-auto lg:pt-12">
+          <p className="mb-6 text-[11px] font-medium uppercase tracking-[0.16em] text-[#6b7280]">
+            Trusted by
           </p>
-          <div className="flex flex-wrap items-center gap-8 md:gap-12">
-            {trustedLogos.map((logo) => (
-              <span
-                key={logo}
-                className="text-sm font-semibold tracking-wide text-white/30 transition hover:text-white/50 md:text-base"
+          <ul className="flex flex-wrap items-center gap-x-8 gap-y-5 sm:gap-x-10 md:gap-x-12">
+            {trustedBrands.map((brand) => (
+              <li
+                key={brand.id}
+                className="flex items-center gap-2 text-[13px] font-semibold tracking-wide text-[#9ca3af]"
               >
-                {logo}
-              </span>
+                <TrustedBrandIcon brand={brand.id} />
+                <span>{brand.name}</span>
+              </li>
             ))}
-          </div>
-        </SectionReveal>
+          </ul>
+        </div>
       </Container>
     </section>
   );

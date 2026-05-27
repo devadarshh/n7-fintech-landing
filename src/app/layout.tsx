@@ -11,7 +11,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "N7 | The new foundation of modern banking",
   description:
-    "N7 helps financial institutions improve client experience, automate procedures, and simplify banking operations.",
+    "We drive innovation and growth, provide seamless customer experience and operational excellence.",
   openGraph: {
     title: "N7 | Modern Banking Platform",
     description: "Cloud-based core banking and digital banking solutions.",

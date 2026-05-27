@@ -5,28 +5,32 @@ import { ArrowRight } from "@/components/ui/icons";
 import {
   addresses,
   bankingLinks,
+  type FooterLink,
   socialLinks,
   solutionLinks,
 } from "@/data/footer";
+import { links } from "@/data/links";
 
 function FooterLinkColumn({
   title,
-  links,
+  links: columnLinks,
 }: {
   title: string;
-  links: string[];
+  links: FooterLink[];
 }) {
   return (
     <div>
       <h4 className="mb-4 text-sm font-semibold text-white">{title}</h4>
       <ul className="space-y-3">
-        {links.map((link) => (
-          <li key={link}>
+        {columnLinks.map((link) => (
+          <li key={link.label}>
             <Link
-              href="#"
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group flex items-center justify-between text-sm text-text-muted transition hover:text-white"
             >
-              {link}
+              {link.label}
               <ArrowRight className="h-4 w-4 opacity-0 transition group-hover:opacity-100" />
             </Link>
           </li>
@@ -46,13 +50,17 @@ export function Footer() {
               Take the full advantage of going paper-less now.
             </h2>
             <p className="text-sm text-text-muted md:text-base">
-              CB7 helps your financial institution improve the client experience, automate and
+              N7 helps your financial institution improve the client experience, automate and
               optimize procedures, simplify banking operations.
             </p>
           </div>
           <div className="flex flex-wrap gap-4">
-            <Button variant="ghost">CONTACT US</Button>
-            <Button variant="primary">REQUEST DEMO</Button>
+            <Button variant="ghost" href={links.contact}>
+              CONTACT US
+            </Button>
+            <Button variant="primary" href={links.requestDemo}>
+              REQUEST DEMO
+            </Button>
           </div>
         </div>
 

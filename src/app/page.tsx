@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/sections/Navbar";
 import { Hero } from "@/components/sections/Hero";
 import { Solutions } from "@/components/sections/Solutions";
+import { LoanManagement } from "@/components/sections/LoanManagement";
 import { CoreBanking } from "@/components/sections/CoreBanking";
 import { CoreBankingFeatures } from "@/components/sections/CoreBankingFeatures";
 import { PaperlessCta } from "@/components/sections/PaperlessCta";
@@ -17,6 +18,7 @@ export default function Home() {
       <main className="overflow-x-hidden">
         <Hero />
         <Solutions />
+        <LoanManagement />
         <CoreBanking />
         <CoreBankingFeatures />
         <PaperlessCta />
