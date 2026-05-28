@@ -2,15 +2,24 @@ import { cn } from "@/lib/utils";
 
 export function DashboardMockup({
   variant = "aml",
+  embedded = false,
   className,
 }: {
   variant?: "aml" | "kyc";
+  embedded?: boolean;
   className?: string;
 }) {
   return (
     <div className={cn("relative", className)}>
-      <div className="relative rounded-[12px] border border-[#0066ff]/45 bg-[#0a1422] p-[5px] shadow-[0_24px_80px_rgba(0,102,255,0.22)]">
-        <div className="overflow-hidden rounded-[8px] bg-[#f8fafc]">
+      <div
+        className={cn(
+          "relative overflow-hidden bg-[#f8fafc]",
+          embedded
+            ? "rounded-t-[8px]"
+            : "rounded-[12px] border border-[#0066ff]/45 bg-[#0a1422] p-[5px] shadow-[0_24px_80px_rgba(0,102,255,0.22)]",
+        )}
+      >
+        <div className={cn(!embedded && "overflow-hidden rounded-[8px] bg-[#f8fafc]")}>
           <div className="flex min-h-[280px] md:min-h-[320px]">
             {variant === "kyc" ? (
               <KycDashboard />
@@ -20,10 +29,12 @@ export function DashboardMockup({
           </div>
         </div>
       </div>
-      <div
-        className="mx-auto mt-3 h-[2px] w-[78%] rounded-full bg-gradient-to-r from-transparent via-[#0066ff]/70 to-transparent"
-        aria-hidden
-      />
+      {!embedded && (
+        <div
+          className="mx-auto mt-3 h-[2px] w-[78%] rounded-full bg-gradient-to-r from-transparent via-[#0066ff]/70 to-transparent"
+          aria-hidden
+        />
+      )}
     </div>
   );
 }
@@ -87,7 +98,7 @@ function AmlDashboard() {
 function KycDashboard() {
   return (
     <>
-      <div className="flex-1 p-3 md:p-4">
+      <div className="relative flex-1 p-3 md:p-4">
         <h4 className="mb-3 text-sm font-bold text-slate-800">KYC Dashboard</h4>
         <div className="mb-3 grid grid-cols-3 gap-2">
           {[
@@ -123,20 +134,34 @@ function KycDashboard() {
           {[35, 55, 40, 70, 45].map((h, i) => (
             <div
               key={i}
-              className={`flex-1 rounded-t ${i % 2 ? "bg-red-400" : "bg-blue-500"}`}
+              className={`flex-1 rounded-t ${i % 2 ? "bg-red-400" : "bg-emerald-500"}`}
               style={{ height: `${h}%` }}
             />
           ))}
         </div>
+
+        <div className="absolute right-2 top-10 z-10 hidden w-[42%] rounded border border-slate-200 bg-white p-2 shadow-lg sm:block">
+          <p className="mb-2 text-[8px] font-semibold text-slate-800">Failed Records</p>
+          {[
+            { name: "Ajaya Krishna", id: "CUST-1042" },
+            { name: "Raghu Nandan", id: "CUST-2087" },
+            { name: "Chandra Ghosh", id: "CUST-3310" },
+          ].map(({ name, id }) => (
+            <div
+              key={id}
+              className="mb-1.5 flex items-center justify-between gap-1 border-b border-slate-100 pb-1 last:mb-0 last:border-0"
+            >
+              <div>
+                <p className="text-[7px] font-medium text-slate-700">{name}</p>
+                <p className="text-[6px] text-slate-400">{id}</p>
+              </div>
+              <span className="rounded bg-[#0066ff] px-1.5 py-0.5 text-[6px] font-medium text-white">
+                Update
+              </span>
+            </div>
+          ))}
+        </div>
       </div>
-      <aside className="hidden w-24 shrink-0 border-l border-slate-200 bg-white p-2 sm:block">
-        <p className="mb-2 text-[8px] font-medium text-slate-600">Details</p>
-        {["Ajaya Krishna", "Raghu Nandan", "Chandra Ghosh"].map((name) => (
-          <p key={name} className="border-b border-slate-100 py-1 text-[7px] text-slate-500">
-            {name}
-          </p>
-        ))}
-      </aside>
     </>
   );
 }

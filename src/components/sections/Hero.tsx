@@ -17,13 +17,13 @@ export function Hero() {
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-12 xl:gap-16">
           <div className="flex flex-col justify-center lg:max-w-[540px] lg:py-8">
             <h1 className="mb-5 text-[2.25rem] font-bold leading-[1.08] tracking-[-0.03em] text-white sm:text-[2.75rem] lg:text-[4rem] lg:leading-[1.05] xl:text-[4.5rem]">
-              The new foundation
-              <br />
-              of modern banking
+              <span className="block sm:whitespace-nowrap">The new foundation</span>
+              <span className="block sm:whitespace-nowrap">of modern banking</span>
             </h1>
-            <p className="mb-8 max-w-[480px] text-[15px] leading-[1.65] text-text-body md:text-base md:leading-7">
-              We drive innovation and growth, provide seamless customer experience and operational
-              excellence
+            <p className="mb-8 max-w-[520px] text-[15px] leading-[1.65] text-text-body md:text-base md:leading-7">
+              We drive innovation and growth, provide seamless
+              <br />
+              customer experience and operational excellence
             </p>
             <div className="flex flex-wrap items-center gap-3 sm:gap-4">
               <Button variant="primary" href={links.requestDemo} className="rounded-lg px-7 py-3.5">

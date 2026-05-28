@@ -8,7 +8,7 @@ import { n7Assets } from "@/data/n7Assets";
 
 export function LoanManagement() {
   return (
-    <section className="relative overflow-hidden border-t border-white/[0.06] bg-bg-dark py-20 md:py-28">
+    <section className="relative overflow-hidden bg-bg-dark py-16 md:py-24 lg:py-28">
       <Container className="relative">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-14 xl:gap-20">
           <SectionReveal>
@@ -36,21 +36,15 @@ export function LoanManagement() {
           <SectionReveal delay={0.12} className="lg:justify-self-end">
             <div className="relative mx-auto w-full max-w-[632px]">
               <div
-                className="pointer-events-none absolute -inset-4 rounded-2xl bg-[#0066ff]/15 blur-2xl"
+                className="pointer-events-none absolute -inset-6 rounded-2xl bg-[#0066ff]/20 blur-3xl"
                 aria-hidden
               />
-              <div className="relative overflow-hidden rounded-[12px] border border-[#0066ff]/40 bg-[#0a1422] p-1 shadow-[0_24px_80px_rgba(0,102,255,0.2)]">
-                <FigmaAsset
-                  src={n7Assets.dashboard.aml}
-                  width={n7Assets.dashboard.amlWidth}
-                  height={n7Assets.dashboard.amlHeight}
-                  alt="AML Dashboard"
-                  className="rounded-[8px]"
-                />
-              </div>
-              <div
-                className="mx-auto mt-3 h-[2px] w-[78%] rounded-full bg-gradient-to-r from-transparent via-[#0066ff]/70 to-transparent"
-                aria-hidden
+              <FigmaAsset
+                src={n7Assets.dashboard.aml}
+                width={n7Assets.dashboard.amlWidth}
+                height={n7Assets.dashboard.amlHeight}
+                alt="AML Dashboard"
+                className="relative rounded-xl shadow-[0_0_60px_rgba(0,102,255,0.35)]"
               />
             </div>
           </SectionReveal>

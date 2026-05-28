@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArrowRight } from "@/components/ui/icons";
 import { links } from "@/data/links";
 import { cn } from "@/lib/utils";
 
@@ -73,7 +74,7 @@ export function LinkArrow({
       {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
     >
       {children}
-      <span aria-hidden>→</span>
+      <ArrowRight className="h-3.5 w-3.5 shrink-0" />
     </Link>
   );
 }

@@ -19,7 +19,7 @@ export function CoreBankingFeatures() {
 
           <SectionReveal delay={0.1} className="order-1 lg:order-2">
             <h2 className="mb-3 max-w-xl text-[1.75rem] font-bold leading-[1.15] text-white md:text-4xl">
-              Run a more efficient, flexible, and digitally connected corebanking system
+              Run a more efficient, flexible, and digitally connected core banking system
             </h2>
             <p className="mb-8 text-sm font-medium text-white md:text-base">What you will get:</p>
             <div className="grid gap-8 sm:grid-cols-2">
