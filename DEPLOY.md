@@ -12,12 +12,12 @@ git commit -m "Implement N7 fintech landing page for Codelinear assignment"
 
 ## GitHub
 
-1. Create a new repository on GitHub (e.g. `n7-landing`).
+1. Create a new repository on GitHub named **`n7-fintech-landing`** (recommended).
 2. Push:
 
 ```bash
 git branch -M main
-git remote add origin https://github.com/devadarshh/n7-landing.git
+git remote add origin https://github.com/devadarshh/n7-fintech-landing.git
 git push -u origin main
 ```
 
@@ -28,7 +28,7 @@ git push -u origin main
 3. Framework preset: **Next.js** (auto-detected).
 4. Deploy — no environment variables required.
 
-Your live URL will look like: `https://n7-landing.vercel.app`
+Your live URL will look like: `https://n7-fintech-landing.vercel.app`
 
 ## Submission email
 
