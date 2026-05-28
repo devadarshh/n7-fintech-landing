@@ -14,7 +14,7 @@ export function CoreBanking() {
       </div>
 
       <Container className="relative">
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16 xl:gap-20">
+        <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:gap-16 xl:gap-20">
           <SectionReveal>
             <h2 className="mb-5 max-w-xl text-[2rem] font-bold leading-[1.08] tracking-[-0.02em] text-white sm:text-[2.25rem] md:text-[2.75rem] lg:text-[3rem]">
               A complete cloud-based
@@ -37,8 +37,8 @@ export function CoreBanking() {
             </div>
           </SectionReveal>
 
-          <SectionReveal delay={0.12} className="lg:justify-self-end lg:overflow-visible">
-            <LaptopMockup />
+          <SectionReveal delay={0.12} className="w-full lg:justify-self-end lg:overflow-visible">
+            <LaptopMockup className="mx-auto lg:mx-0" />
           </SectionReveal>
         </div>
       </Container>

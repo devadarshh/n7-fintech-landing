@@ -10,16 +10,16 @@ type LaptopMockupProps = {
 
 export function LaptopMockup({ className, align = "right", children }: LaptopMockupProps) {
   return (
-    <div className={cn("relative w-full max-w-[720px] lg:max-w-none", className)}>
+    <div className={cn("relative w-full max-w-[900px] lg:max-w-none", className)}>
       <div
         className="pointer-events-none absolute -inset-6 rounded-3xl bg-[#0066ff]/12 blur-3xl md:-inset-10"
         aria-hidden
       />
       <div
         className={cn(
-          "relative",
-          align === "right" && "translate-x-[6%] md:translate-x-[10%]",
-          align === "left" && "-translate-x-[4%] md:-translate-x-[6%]",
+          "relative w-full",
+          align === "right" && "lg:translate-x-[4%]",
+          align === "left" && "lg:-translate-x-[3%]",
         )}
       >
         <div className="rounded-t-[14px] border-2 border-[#0066ff]/55 bg-transparent p-1.5 pb-0">

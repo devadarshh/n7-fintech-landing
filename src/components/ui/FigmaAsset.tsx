@@ -27,7 +27,7 @@ export function FigmaAsset({
       height={height}
       priority={priority}
       className={cn("h-auto w-full", className)}
-      sizes="(max-width: 768px) 100vw, 50vw"
+      sizes="(max-width: 1024px) 100vw, (max-width: 1280px) 55vw, 640px"
     />
   );
 }
