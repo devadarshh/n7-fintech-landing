@@ -9,9 +9,7 @@ A responsive, pixel-focused marketing site for a modern banking platform. Built 
 
 ## Live demo
 
-> Deploy on [Vercel](https://vercel.com/new) and add your URL here after the first deploy.
-
-`https://your-project.vercel.app`
+**[https://n7-fintech-landing.vercel.app/](https://n7-fintech-landing.vercel.app/)**
 
 ## Features
 
